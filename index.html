@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketplace jamaah PRM Ngampelsari - Platform digital UMKM dan jasa jamaah Muhammadiyah. Dukung produk lokal, belanja berkah bersama.">
+  <meta name="keywords" content="marketplace jamaah, UMKM Muhammadiyah, belanja online Sidoarjo, produk jamaah">
+  <meta property="og:title" content="Marketplace PRM Ngampelsari - Dukung Jamaah, Belanja Berkah">
+  <meta property="og:description" content="Platform digital untuk UMKM dan jasa jamaah Muhammadiyah di Ngampelsari">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1200&h=630&fit=crop">
+  
+  <title>Marketplace PRM Ngampelsari - Dukung Jamaah, Belanja Berkah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🛍️</text></svg>">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    body { font-family: 'Poppins', sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, #1e40af 0%, #059669 100%); }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+    .badge-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .7; } }
+    .seller-badge { 
+      background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+    .price-tag {
+      font-weight: 700;
+      color: #059669;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="border-b bg-white sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3 hover:opacity-80 transition">
+      <div class="w-10 h-10 rounded-lg hero-gradient flex items-center justify-center text-white font-bold">
+        🛍️
+      </div>
+      <div>
+        <p class="font-bold text-blue-700">Marketplace</p>
+        <p class="text-xs text-slate-500">PRM Ngampelsari</p>
+      </div>
+    </a>
+    
+    <div class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#beranda" class="hover:text-blue-700 transition">Beranda</a>
+      <a href="#produk" class="hover:text-blue-700 transition">Marketplace</a>
+      <a href="#tentang" class="hover:text-blue-700 transition">Tentang Kami</a>
+      <a href="#kontak" class="hover:text-blue-700 transition">Kontak</a>
+    </div>
+
+    <button onclick="scrollToSection('#produk')" class="bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-800 transition">
+      Belanja Sekarang
+    </button>
+  </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section id="beranda" class="hero-gradient text-white">
+  <div class="max-w-7xl mx-auto px-6 py-32 text-center">
+    <div class="mb-6 inline-block bg-white/20 backdrop-blur text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30">
+      ✨ Dukung Produk Jamaah, Belanja Berkah Bersama
+    </div>
+    
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+      Temukan Produk & Jasa<br>Usaha Jamaah
+    </h1>
+    
+    <p class="max-w-2xl mx-auto text-white/90 mb-10 text-lg">
+      Platform digital untuk UMKM dan jasa jamaah Muhammadiyah. Produk berkualitas, harga terjangkau, semua dari tangan jamaah kami sendiri.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button onclick="scrollToSection('#produk')" class="bg-white text-blue-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+        🛒 Jelajahi Produk
+      </button>
+      <a href="#kontak" class="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition">
+        Menjadi Seller
+      </a>
+    </div>
+
+    <!-- Social Proof -->
+    <div class="mt-16 grid grid-cols-3 gap-8 max-w-md mx-auto text-center">
+      <div>
+        <p class="text-2xl font-bold">250+</p>
+        <p class="text-white/80 text-sm">Produk</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold">45+</p>
+        <p class="text-white/80 text-sm">Seller</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold">5K+</p>
+        <p class="text-white/80 text-sm">Pembeli</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KATEGORI HIGHLIGHT ================= -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold text-center mb-12">Kategori Populer</h2>
+  
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl text-center card-hover cursor-pointer hover:from-orange-100 hover:to-orange-200"
+         onclick="filterByKategori('Makanan')">
+      <p class="text-4xl mb-3">🍜</p>
+      <h3 class="font-bold text-lg mb-2">Makanan & Minuman</h3>
+      <p class="text-sm text-slate-600">Camilan hingga makanan berat</p>
+    </div>
+
+    <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-2xl text-center card-hover cursor-pointer hover:from-pink-100 hover:to-pink-200"
+         onclick="filterByKategori('Skincare')">
+      <p class="text-4xl mb-3">✨</p>
+      <h3 class="font-bold text-lg mb-2">Skincare & Kecantikan</h3>
+      <p class="text-sm text-slate-600">Produk alami untuk kulit sehat</p>
+    </div>
+
+    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl text-center card-hover cursor-pointer hover:from-blue-100 hover:to-blue-200"
+         onclick="filterByKategori('Jasa')">
+      <p class="text-4xl mb-3">🔧</p>
+      <h3 class="font-bold text-lg mb-2">Jasa Profesional</h3>
+      <p class="text-sm text-slate-600">Service dan perbaikan terpercaya</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARKETPLACE SECTION ================= -->
+<section id="produk" class="bg-slate-50 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-3">Marketplace Jamaah</h2>
+      <p class="text-slate-600">Produk pilihan dari UMKM jamaah Muhammadiyah yang berkualitas</p>
+    </div>
+
+    <!-- FILTER SECTION -->
+    <div class="bg-white border rounded-2xl p-6 mb-12 shadow-sm">
+      <div class="flex flex-col md:flex-row gap-4 mb-6">
+        <input id="searchInput" type="text"
+          placeholder="🔍 Cari toko atau produk..."
+          class="w-full md:flex-1 border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition">
+
+        <select id="kategoriFilter" class="border rounded-lg px-4 py-3 md:w-48 focus:ring-2 focus:ring-blue-600">
+          <option value="">📂 Semua Kategori</option>
+          <option value="Makanan">🍜 Makanan & Minuman</option>
+          <option value="Skincare">✨ Skincare & Kecantikan</option>
+          <option value="Jasa">🔧 Jasa Profesional</option>
+        </select>
+
+        <select id="lokasiFilter" class="border rounded-lg px-4 py-3 md:w-48 focus:ring-2 focus:ring-blue-600">
+          <option value="">📍 Semua Lokasi</option>
+          <option value="Ngampelsari">Ngampelsari</option>
+          <option value="Sidoarjo">Sidoarjo</option>
+        </select>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <button onclick="resetFilter()" class="border border-slate-300 px-6 py-2 rounded-lg hover:bg-slate-100 transition font-medium text-sm">
+          ↻ Reset Filter
+        </button>
+        <button onclick="applyFilter()" class="bg-blue-700 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition font-medium text-sm">
+          ✓ Terapkan Filter
+        </button>
+      </div>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- PRODUCT 1: CUCI SAHABAT AL-AMIN -->
+      <a href="cuci.html" class="product-card bg-white border rounded-2xl overflow-hidden card-hover cursor-pointer"
+        data-nama="Cuci Sahabat Al-Amin"
+        data-kategori="Jasa"
+        data-lokasi="Ngampelsari"
+        data-harga="89000"
+        data-seller="AUM Al-Amin">
+        
+        <div class="relative overflow-hidden h-48">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&h=400&fit=crop" class="h-full w-full object-cover hover:scale-110 transition duration-300">
+          <div class="absolute top-3 right-3">
+            <span class="seller-badge">⭐ Top Seller</span>
+          </div>
+        </div>
+
+        <div class="p-5">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">🔧 Jasa</span>
+            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Tersedia</span>
+          </div>
+
+          <h3 class="font-bold text-lg mb-2">Cuci Sahabat Al-Amin</h3>
+          <p class="text-sm text-slate-600 mb-3">Layanan jasa cuci mobil, motor, dan karpet profesional dengan hasil terbaik.</p>
+          
+          <div class="mb-3 pb-3 border-b border-slate-200">
+            <p class="text-xs text-slate-500 mb-1">💼 Penjual: <span class="font-bold">AUM Al-Amin</span></p>
+            <p class="text-xs text-slate-500">📍 Ngampelsari</p>
+          </div>
+
+          <div class="flex items-center justify-between mb-4">
+            <span class="price-tag">Rp 89.000</span>
+            <div class="flex items-center gap-1 text-xs">
+              <span class="text-yellow-400">★★★★★</span>
+              <span class="text-slate-500">(142)</span>
+            </div>
+          </div>
+
+          <div class="w-full bg-green-600 text-white py-2 rounded-lg text-center font-bold hover:bg-green-700 transition flex items-center justify-center gap-2">
+            👁️ Lihat Detail
+          </div>
+        </div>
+      </a>
+
+      <!-- PRODUCT 2: TAKOYAKI ANGGA -->
+      <a href="takoyaki.html" class="product-card bg-white border rounded-2xl overflow-hidden card-hover cursor-pointer"
+        data-nama="Takoyaki Angga"
+        data-kategori="Makanan"
+        data-lokasi="Ngampelsari"
+        data-harga="25000"
+        data-seller="Angga">
+        
+        <div class="relative overflow-hidden h-48">
+          <img src="Picture/Takoyaki.jpg" class="h-full w-full object-cover hover:scale-110 transition duration-300">
+          <div class="absolute top-3 right-3">
+            <span class="seller-badge">🔥 Viral</span>
+          </div>
+        </div>
+
+        <div class="p-5">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium">🍜 Makanan</span>
+            <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full animate-pulse">⚡ Fresh</span>
+          </div>
+
+          <h3 class="font-bold text-lg mb-2">Takoyaki & Es Teh </h3>
+          <p class="text-sm text-slate-600 mb-3">Takoyaki premium dengan bahan berkualitas, isian melimpah, dan rasa autentik Jepang.</p>
+          
+          <div class="mb-3 pb-3 border-b border-slate-200">
+            <p class="text-xs text-slate-500 mb-1">💼 Penjual: <span class="font-bold">Pak Fiqih & Bu Dian</span></p>
+            <p class="text-xs text-slate-500">📍 Ngampelsari</p>
+          </div>
+
+          <div class="flex items-center justify-between mb-4">
+            <span class="price-tag">Rp 25.000</span>
+            <div class="flex items-center gap-1 text-xs">
+              <span class="text-yellow-400">★★★★★</span>
+              <span class="text-slate-500">(289)</span>
+            </div>
+          </div>
+
+          <div class="w-full bg-green-600 text-white py-2 rounded-lg text-center font-bold hover:bg-green-700 transition flex items-center justify-center gap-2">
+            👁️ Lihat Detail
+          </div>
+        </div>
+      </a>
+
+      
+
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-12">
+      <button class="bg-white border-2 border-blue-700 text-blue-700 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition">
+        📦 Tampilkan Lebih Banyak
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section id="tentang" class="max-w-7xl mx-auto px-6 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl font-bold mb-6">Tentang Kami</h2>
+      <p class="text-slate-600 mb-4 leading-relaxed">
+        Marketplace PRM Ngampelsari adalah platform digital yang menghubungkan pembeli dengan UMKM dan jasa profesional dari jamaah Muhammadiyah. 
+      </p>
+      <p class="text-slate-600 mb-4 leading-relaxed">
+        Kami percaya bahwa teknologi harus memberdayakan ekonomi jamaah lokal. Setiap pembelian Anda adalah dukungan langsung kepada produk berkualitas dari tangan jamaah sendiri.
+      </p>
+      <p class="text-slate-600 mb-6 leading-relaxed">
+        Bergabunglah dengan ribuan pembeli yang telah mempercayai marketplace kami untuk memenuhi kebutuhan sehari-hari dengan hati yang berkah.
+      </p>
+      <button onclick="scrollToSection('#kontak')" class="bg-blue-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition">
+        Hubungi Kami
+      </button>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-blue-50 p-6 rounded-2xl">
+        <p class="text-3xl font-bold text-blue-700">250+</p>
+        <p class="text-slate-600 mt-2">Produk Pilihan</p>
+      </div>
+      <div class="bg-green-50 p-6 rounded-2xl">
+        <p class="text-3xl font-bold text-green-700">45+</p>
+        <p class="text-slate-600 mt-2">Seller Terpercaya</p>
+      </div>
+      <div class="bg-orange-50 p-6 rounded-2xl">
+        <p class="text-3xl font-bold text-orange-700">5K+</p>
+        <p class="text-slate-600 mt-2">Pembeli Puas</p>
+      </div>
+      <div class="bg-pink-50 p-6 rounded-2xl">
+        <p class="text-3xl font-bold text-pink-700">100%</p>
+        <p class="text-slate-600 mt-2">Jamaah Indonesia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA SECTION ================= -->
+<section class="hero-gradient text-white py-16 mt-16">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Ingin Menjadi Seller?</h2>
+    <p class="text-white/90 mb-8 text-lg">
+      Daftarkan produk atau jasa Anda secara GRATIS dan jangkau ribuan pembeli di marketplace PRM Ngampelsari.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/6281122334455?text=Assalamualaikum%2C%20saya%20tertarik%20untuk%20menjadi%20seller%20di%20marketplace%20PRM%20Ngampelsari" 
+         target="_blank"
+         class="bg-white text-blue-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+        💬 Hubungi Admin
+      </a>
+      <button onclick="scrollToSection('#kontak')" class="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition">
+        Pelajari Lebih Lanjut
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="kontak" class="bg-slate-900 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+
+    <div>
+      <div class="flex items-start gap-3 mb-4">
+        <div class="w-10 h-10 rounded-lg hero-gradient flex items-center justify-center">
+          🛍️
+        </div>
+        <div>
+          <p class="font-bold leading-snug">Marketplace PRM</p>
+          <p class="text-sm text-gray-400">Ngampelsari</p>
+        </div>
+      </div>
+      <p class="text-sm text-gray-400 leading-relaxed">
+        Jl. H. Miskan RT.05 RW.03 Dusun Tawangsari, Desa Ngampelsari, Kec. Candi, Kab. Sidoarjo
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-4 border-b border-gray-700 pb-2">Menu Utama</h4>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="#beranda" class="hover:text-white transition">Beranda</a></li>
+        <li><a href="#produk" class="hover:text-white transition">Marketplace</a></li>
+        <li><a href="#tentang" class="hover:text-white transition">Tentang Kami</a></li>
+        <li><a href="#kontak" class="hover:text-white transition">Kontak</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-4 border-b border-gray-700 pb-2">Informasi</h4>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+        <li><a href="#" class="hover:text-white transition">Kebijakan Privasi</a></li>
+        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+        <li><a href="#" class="hover:text-white transition">Hubungi Support</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-4 border-b border-gray-700 pb-2">Hubungi Kami</h4>
+      <div class="space-y-3 text-sm text-gray-400">
+        <p>📧 <a href="mailto:info@prmngampelsari.com" class="hover:text-white transition">info@prmngampelsari.com</a></p>
+        <p>📱 <a href="tel:+6281122334455" class="hover:text-white transition">0811-2233-4455</a></p>
+        <p>💬 <a href="https://wa.me/6281122334455" target="_blank" class="hover:text-white transition">WhatsApp Admin</a></p>
+        <div class="flex gap-4 mt-4">
+          <a href="#" class="text-lg hover:text-white transition">f</a>
+          <a href="#" class="text-lg hover:text-white transition">📷</a>
+          <a href="#" class="text-lg hover:text-white transition">▶️</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-700">
+    <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
+      <p class="mb-2">© 2025 Marketplace PRM Ngampelsari. All Rights Reserved.</p>
+      <p>
+        💡 Dikembangkan dengan penuh dedikasi untuk memberdayakan ekonomi jamaah Muhammadiyah
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+// Filter functionality
+function applyFilter() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const kategori = document.getElementById('kategoriFilter').value;
+  const lokasi = document.getElementById('lokasiFilter').value;
+
+  let visibleCount = 0;
+  document.querySelectorAll('.product-card').forEach(card => {
+    const nama = card.dataset.nama.toLowerCase();
+    const kat = card.dataset.kategori;
+    const lok = card.dataset.lokasi;
+
+    let show = true;
+    if (search && !nama.includes(search)) show = false;
+    if (kategori && kategori !== kat) show = false;
+    if (lokasi && lokasi !== lok) show = false;
+
+    card.style.display = show ? 'block' : 'none';
+    if (show) visibleCount++;
+  });
+
+  // Show "no results" message if needed
+  if (visibleCount === 0) {
+    alert('Produk tidak ditemukan. Coba ubah filter Anda.');
+  }
+}
+
+function resetFilter() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('kategoriFilter').value = '';
+  document.getElementById('lokasiFilter').value = '';
+  document.querySelectorAll('.product-card').forEach(c => c.style.display = 'block');
+}
+
+function filterByKategori(kategori) {
+  document.getElementById('kategoriFilter').value = kategori;
+  applyFilter();
+  scrollToSection('#produk');
+}
+
+function scrollToSection(selector) {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// Real-time search
+document.getElementById('searchInput')?.addEventListener('keyup', applyFilter);

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Takoyaki Angga - Takoyaki premium dengan bahan berkualitas, isian melimpah, dan rasa autentik Jepang di Ngampelsari">
+  <meta name="keywords" content="takoyaki, takoyaki enak, jajanan Ngampelsari, kue Jepang, camilan premium">
+  <meta property="og:title" content="Takoyaki Angga - Takoyaki Premium Autentik">
+  <meta property="og:description" content="Takoyaki premium dengan bahan berkualitas dan rasa autentik Jepang. Pesan sekarang via WhatsApp!">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1553909764-5a6a9f592e0e?w=1200&h=630&fit=crop">
+  
+  <title>Takoyaki Premium Autentik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🛍️</text></svg>">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    body { font-family: 'Poppins', sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, #1e40af 0%, #059669 100%); }
+    .gallery-thumb { cursor: pointer; border: 2px solid transparent; border-radius: 0.5rem; transition: all 0.3s; }
+    .gallery-thumb:hover { border-color: #3b82f6; }
+    .gallery-thumb.active { border-color: #3b82f6; box-shadow: 0 0 8px rgba(59, 130, 246, 0.5); }
+    .tab-button { transition: all 0.3s; }
+    .tab-button.active { border-bottom: 3px solid #3b82f6; color: #3b82f6; }
+    .rating-bar { display: flex; align-items: center; gap: 0.5rem; }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="border-b bg-white sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+      <div class="w-10 h-10 rounded-lg hero-gradient flex items-center justify-center text-white font-bold">
+        🛍️
+      </div>
+      <div>
+        <p class="font-bold text-blue-700">Marketplace</p>
+        <p class="text-xs text-slate-500">PRM Ngampelsari</p>
+      </div>
+    </a>
+    
+    <div class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="index.html#beranda" class="hover:text-blue-700 transition">Beranda</a>
+      <a href="index.html#produk" class="hover:text-blue-700 transition">Marketplace</a>
+      <a href="index.html#tentang" class="hover:text-blue-700 transition">Tentang Kami</a>
+    </div>
+
+    <a href="index.html#produk" class="bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-800 transition">
+      ← Kembali
+    </a>
+  </div>
+</nav>
+
+<!-- ================= BREADCRUMB ================= -->
+<div class="max-w-7xl mx-auto px-6 py-4">
+  <div class="flex items-center gap-2 text-sm text-slate-600">
+    <a href="index.html" class="hover:text-blue-700">Beranda</a>
+    <span>›</span>
+    <a href="index.html#produk" class="hover:text-blue-700">Marketplace</a>
+    <span>›</span>
+    <a href="#" class="hover:text-blue-700">Makanan & Minuman</a>
+    <span>›</span>
+    <span class="text-slate-800 font-medium">Takoyaki & Es Teh</span>
+  </div>
+</div>
+
+<!-- ================= PRODUCT DETAIL ================= -->
+<section class="max-w-7xl mx-auto px-6 py-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+    <!-- LEFT: IMAGE GALLERY -->
+    <div>
+      <!-- Main Image -->
+      <div class="mb-4 bg-orange-50 rounded-2xl overflow-hidden border-4 border-orange-200">
+        <img id="mainImage" 
+             src="Picture/Takoyaki.jpg" 
+             alt="Takoyaki Angga" 
+             class="w-full h-96 object-cover">
+      </div>
+
+      <!-- Thumbnail Gallery -->
+      <div class="grid grid-cols-4 gap-3">
+        <img src="Picture/Takoyaki.jpg" 
+             class="gallery-thumb active h-20 w-full object-cover rounded-lg border-2 border-blue-600"
+             onclick="changeMainImage(this.src)">
+             <img src="Picture/Takoyaki.jpg" 
+             class="gallery-thumb h-20 w-full object-cover rounded-lg border-2 border-gray-300 hover:border-blue-400"
+             onclick="changeMainImage(this.src)">
+             <img src="Picture/Takoyaki.jpg" 
+             class="gallery-thumb h-20 w-full object-cover rounded-lg border-2 border-gray-300 hover:border-blue-400"
+             onclick="changeMainImage(this.src)">
+             <img src="Picture/Takoyaki.jpg" 
+             class="gallery-thumb h-20 w-full object-cover rounded-lg border-2 border-gray-300 hover:border-blue-400"
+             onclick="changeMainImage(this.src)">
+      </div>
+    </div>
+
+    <!-- RIGHT: PRODUCT INFO -->
+    <div>
+      <!-- Category & Badge -->
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-bold">🍜 MAKANAN & MINUMAN</span>
+        <span class="text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full font-bold animate-pulse">🔥 FRESH</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl font-bold mb-3 leading-tight">🍡 Takoyaki & Es Teh</h1>
+
+      <!-- Rating -->
+      <div class="flex items-center gap-4 mb-6 pb-6 border-b border-slate-200">
+        <div class="flex items-center gap-1">
+          <span class="text-2xl">★★★★★</span>
+          <span class="text-lg font-bold text-slate-800">4.95</span>
+        </div>
+        <span class="text-slate-600 text-sm">(289 review)</span>
+        <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">👍 98% Pembeli Puas</span>
+      </div>
+
+      <!-- Price & Stock -->
+      <div class="mb-6 pb-6 border-b border-slate-200">
+        <p class="text-slate-600 text-sm mb-2">Harga per Porsi (5 pcs)</p>
+        <p class="text-4xl font-bold text-orange-600 mb-4">Rp 25.000</p>
+        <div class="flex items-center gap-4 flex-wrap">
+          <span class="px-4 py-2 bg-green-100 text-green-700 rounded-lg font-bold">✓ Stok Tersedia</span>
+          <span class="text-sm text-slate-600">⏱️ Pesanan siap: <span class="font-bold">30 menit</span></span>
+        </div>
+      </div>
+
+      <!-- Quick Facts -->
+      <div class="grid grid-cols-2 gap-4 mb-6 pb-6 border-b border-slate-200">
+        <div class="bg-orange-50 p-4 rounded-lg">
+          <p class="text-xs text-slate-600 mb-1">📍 Lokasi</p>
+          <p class="font-bold">Ngampelsari</p>
+        </div>
+        <div class="bg-yellow-50 p-4 rounded-lg">
+          <p class="text-xs text-slate-600 mb-1">🔥 Penjualan</p>
+          <p class="font-bold">256 bulan ini</p>
+        </div>
+        <div class="bg-pink-50 p-4 rounded-lg">
+          <p class="text-xs text-slate-600 mb-1">📅 Terjual</p>
+          <p class="font-bold">8.9K+ porsi</p>
+        </div>
+        <div class="bg-purple-50 p-4 rounded-lg">
+          <p class="text-xs text-slate-600 mb-1">⚡ Status</p>
+          <p class="font-bold">Rekomendasi</p>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="space-y-3">
+        <a href="https://wa.me/6283456789012?text=Assalamualaikum%20Angga%2C%20saya%20mau%20pesan%20takoyaki.%20Tersedia%20berapa%20porsi%3F" 
+           target="_blank"
+           class="w-full bg-green-600 text-white py-4 rounded-xl text-center font-bold hover:bg-green-700 transition flex items-center justify-center gap-2 text-lg">
+          💬 Pesan via WhatsApp
+        </a>
+        <button class="w-full border-2 border-blue-600 text-blue-600 py-3 rounded-xl font-bold hover:bg-blue-50 transition">
+          ❤️ Simpan ke Wishlist
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TABS ================= -->
+  <div class="border-b border-slate-200 mb-8">
+    <div class="flex gap-8 overflow-x-auto">
+      <button class="tab-button active pb-4 font-bold text-slate-800 border-b-2 border-blue-600 whitespace-nowrap" onclick="switchTab('deskripsi')">
+        📝 Deskripsi
+      </button>
+      <button class="tab-button pb-4 font-medium text-slate-600 hover:text-slate-800 whitespace-nowrap" onclick="switchTab('menu')">
+        🍽️ Menu & Varian
+      </button>
+      <button class="tab-button pb-4 font-medium text-slate-600 hover:text-slate-800 whitespace-nowrap" onclick="switchTab('review')">
+        ⭐ Review (289)
+      </button>
+      <button class="tab-button pb-4 font-medium text-slate-600 hover:text-slate-800 whitespace-nowrap" onclick="switchTab('faq')">
+        ❓ FAQ
+      </button>
+    </div>
+  </div>
+
+  <!-- TAB CONTENT -->
+
+  <!-- DESKRIPSI TAB -->
+  <div id="deskripsi-tab" class="tab-content grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+    <div class="md:col-span-2">
+      <h2 class="text-2xl font-bold mb-4">Tentang Takoyaki Kami</h2>
+      
+      <div class="space-y-6 text-slate-700 leading-relaxed">
+        <p>
+          <strong>🍡 Takoyaki & Es Teh</strong> adalah takoyaki premium yang dibuat dengan cinta dan bahan-bahan pilihan terbaik. Setiap porsi berisi 5 butir takoyaki yang empuk di luar, gurih di dalam, dengan isian gurita yang melimpah dan empuk.
+        </p>
+
+        <div>
+          <h3 class="font-bold text-lg mb-3">✨ Mengapa Pilih Takoyaki & Es Teh?</h3>
+          <ul class="space-y-2">
+            <li class="flex gap-3"><span class="text-orange-600 text-lg">🔥</span> <span>Bahan berkualitas premium - gurita asli import</span></li>
+            <li class="flex gap-3"><span class="text-orange-600 text-lg">🔥</span> <span>Dibuat fresh setiap hari, tidak pernah disimpan semalam</span></li>
+            <li class="flex gap-3"><span class="text-orange-600 text-lg">🔥</span> <span>Resep autentik Jepang dengan sentuhan lokal</span></li>
+            <li class="flex gap-3"><span class="text-orange-600 text-lg">🔥</span> <span>Isian melimpah - bukan takoyaki tipis</span></li>
+            <li class="flex gap-3"><span class="text-orange-600 text-lg">🔥</span> <span>Saus spesial buatan sendiri, tidak ada pengawet</span></li>
+            <li class="flex gap-3"><span class="text-orange-600 text-lg">🔥</span> <span>Dikemas rapi dan aman untuk dibawa pulang</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-3">🛒 Cara Pesan:</h3>
+          <ol class="space-y-2 list-decimal list-inside">
+            <li>Hubungi kami via WhatsApp atau datang langsung</li>
+            <li>Pilih varian takoyaki yang diinginkan (klasik, pedas, mayo)</li>
+            <li>Tentukan jumlah porsi</li>
+            <li>Kami buat fresh di depan Anda (atau pesan untuk dibawa)</li>
+            <li>Nikmati takoyaki lezat yang masih hangat!</li>
+          </ol>
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+          <p class="text-sm"><strong>💡 Tips:</strong> Takoyaki paling nikmat dimakan dalam kondisi hangat. Kami sarankan pesan minimal 2 porsi agar lebih hemat dan seru untuk dimakan bersama.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SELLER INFO CARD -->
+    <div class="md:col-span-1">
+      <div class="bg-orange-50 border-2 border-orange-200 rounded-2xl p-6 sticky top-24">
+        <h3 class="font-bold text-lg mb-4">Informasi Penjual</h3>
+        
+        <div class="mb-6 pb-6 border-b border-orange-200 text-center">
+          <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white text-3xl font-bold">
+            🍡
+          </div>
+          <h4 class="font-bold text-lg">Pak Fiqih & Bu Dian</h4>
+          <p class="text-sm text-slate-600">Penjual Takoyaki</p>
+          <div class="flex items-center justify-center gap-1 mt-2">
+            <span class="text-red-600 text-lg">🔥</span>
+            <span class="text-xs text-red-600 font-bold">VIRAL MERCHANT</span>
+          </div>
+        </div>
+
+        <div class="space-y-3 mb-6">
+          <div class="flex items-start gap-3">
+            <span class="text-slate-600 text-lg">⭐</span>
+            <div>
+              <p class="text-xs text-slate-600">Rating Penjual</p>
+              <p class="font-bold">4.95 / 5.0</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-slate-600 text-lg">📦</span>
+            <div>
+              <p class="text-xs text-slate-600">Total Terjual</p>
+              <p class="font-bold">8.9K+ porsi</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-slate-600 text-lg">⏱️</span>
+            <div>
+              <p class="text-xs text-slate-600">Waktu Respons</p>
+              <p class="font-bold">Instant</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-slate-600 text-lg">🎯</span>
+            <div>
+              <p class="text-xs text-slate-600">Kualitas</p>
+              <p class="font-bold">Sangat Konsisten</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/6283456789012" 
+           target="_blank"
+           class="w-full bg-green-600 text-white py-2 rounded-lg text-center font-bold hover:bg-green-700 transition mb-2">
+          💬 Chat Langsung
+        </a>
+        <button class="w-full border border-orange-300 text-slate-800 py-2 rounded-lg font-bold hover:bg-orange-100 transition">
+          👤 Produk Lain
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU TAB (HIDDEN) -->
+  <div id="menu-tab" class="tab-content hidden mb-12">
+    <h2 class="text-2xl font-bold mb-6">Menu & Varian Takoyaki</h2>
+    
+    <div class="space-y-4">
+      <div class="border-2 border-orange-200 rounded-lg p-5 hover:shadow-lg transition bg-orange-50">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl">🍡</span>
+            <div>
+              <h3 class="font-bold text-lg">Takoyaki Klasik</h3>
+              <p class="text-sm text-slate-600">Takoyaki original dengan saus takoyaki premium</p>
+            </div>
+          </div>
+          <span class="text-xl font-bold text-orange-600">Rp 25.000</span>
+        </div>
+        <p class="text-xs text-slate-600 bg-white p-2 rounded">5 butir • Toppings: Aonori, Bonito Flakes, Mayo</p>
+      </div>
+
+      <div class="border-2 border-red-200 rounded-lg p-5 hover:shadow-lg transition bg-red-50">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl">🌶️</span>
+            <div>
+              <h3 class="font-bold text-lg">Takoyaki Pedas</h3>
+              <p class="text-sm text-slate-600">Untuk yang suka sensasi pedas - sambal khas!</p>
+            </div>
+          </div>
+          <span class="text-xl font-bold text-red-600">Rp 28.000</span>
+        </div>
+        <p class="text-xs text-slate-600 bg-white p-2 rounded">5 butir • Extra: Sambal pedas • Toppings premium</p>
+      </div>
+
+      <div class="border-2 border-blue-200 rounded-lg p-5 hover:shadow-lg transition bg-blue-50">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl">🥑</span>
+            <div>
+              <h3 class="font-bold text-lg">Takoyaki Mayo Keju</h3>
+              <p class="text-sm text-slate-600">Gurih creamy dengan keju parmesan</p>
+            </div>
+          </div>
+          <span class="text-xl font-bold text-blue-600">Rp 30.000</span>
+        </div>
+        <p class="text-xs text-slate-600 bg-white p-2 rounded">5 butir • Extra: Mayo, Keju parmesan, Garlic</p>
+      </div>
+
+      <div class="border-2 border-purple-200 rounded-lg p-5 hover:shadow-lg transition bg-purple-50">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl">🎁</span>
+            <div>
+              <h3 class="font-bold text-lg">Paket Hemat (3 Varian)</h3>
+              <p class="text-sm text-slate-600">Coba semua varian dengan harga spesial</p>
+            </div>
+          </div>
+          <span class="text-xl font-bold text-purple-600">Rp 70.000</span>
+        </div>
+        <p class="text-xs text-slate-600 bg-white p-2 rounded">15 butir total (5 klasik + 5 pedas + 5 mayo) • Hemat Rp 13.000!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEW TAB (HIDDEN) -->
+  <div id="review-tab" class="tab-content hidden mb-12">
+    <h2 class="text-2xl font-bold mb-6">Review Pelanggan (289)</h2>
+    
+    <div class="space-y-4">
+      <div class="border rounded-lg p-4 cursor-pointer hover:shadow-md transition" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between">
+          <p class="font-bold">❓ Apakah ada pengawet atau MSG?</p>
+          <span class="text-xl">+</span>
+        </div>
+        <p class="text-slate-700 mt-3 hidden">Tidak ada sama sekali! Semua bahan kami 100% natural dan segar. Saus, mayo, dan semua toping dibuat sendiri tanpa bahan kimia berbahaya. Kami menjamin kualitas dan kesehatan pelanggan.</p>
+      </div>
+
+      <div class="border rounded-lg p-4 cursor-pointer hover:shadow-md transition" onclick="toggleFaq(this)">
+        <div class="flex items-center justify-between">
+          <p class="font-bold">❓ Bagaimana cara pembayaran?</p>
+          <span class="text-xl">+</span>
+        </div>
+        <p class="text-slate-700 mt-3 hidden">Kami menerima tunai, transfer bank, dan e-wallet (GCash, OVO, DANA). Pembayaran bisa dilakukan saat pembelian atau bisa transfer dulu untuk pre-order. Fleksibel sesuai kenyamanan Anda!</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= RELATED PRODUCTS ================= -->
+<section class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-200">
+  <h2 class="text-3xl font-bold mb-8">Produk Lain dari Takoyaki & Es Teh</h2>
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <a href="#" class="border rounded-2xl overflow-hidden hover:shadow-lg transition">
+      <img src="https://images.unsplash.com/photo-1585328707804-8205db076675?w=400&h=300&fit=crop" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <p class="text-xs text-orange-700 font-bold mb-2">🍜 MAKANAN</p>
+        <h3 class="font-bold text-lg mb-2">Okonomiyaki</h3>
+        <p class="text-sm text-slate-600 mb-3">Pancake Jepang dengan berbagai isian premium</p>
+        <div class="flex items-center justify-between">
+          <span class="text-orange-600 font-bold">Rp 35.000</span>
+          <span class="text-xs">★★★★★ (156)</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="border rounded-2xl overflow-hidden hover:shadow-lg transition">
+      <img src="https://images.unsplash.com/photo-1554430261-92d67b4bf4e9?w=400&h=300&fit=crop" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <p class="text-xs text-orange-700 font-bold mb-2">🍜 MAKANAN</p>
+        <h3 class="font-bold text-lg mb-2">Bento Box Spesial</h3>
+        <p class="text-sm text-slate-600 mb-3">Paket makan siang dengan berbagai lauk pilihan</p>
+        <div class="flex items-center justify-between">
+          <span class="text-orange-600 font-bold">Rp 50.000</span>
+          <span class="text-xs">★★★★★ (98)</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="border rounded-2xl overflow-hidden hover:shadow-lg transition">
+      <img src="https://images.unsplash.com/photo-1579956014945-8b75da53a9b3?w=400&h=300&fit=crop" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <p class="text-xs text-orange-700 font-bold mb-2">🍜 MAKANAN</p>
+        <h3 class="font-bold text-lg mb-2">Dorayaki Homemade</h3>
+        <p class="text-sm text-slate-600 mb-3">Kue Jepang tradisional dengan kacang merah premium</p>
+        <div class="flex items-center justify-between">
+          <span class="text-orange-600 font-bold">Rp 15.000</span>
+          <span class="text-xs">★★★★★ (203)</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-slate-900 text-white mt-16">
+  <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+
+    <div>
+      <div class="flex items-start gap-3 mb-4">
+        <div class="w-10 h-10 rounded-lg hero-gradient flex items-center justify-center">
+          🛍️
+        </div>
+        <div>
+          <p class="font-bold leading-snug">Marketplace PRM</p>
+          <p class="text-sm text-gray-400">Ngampelsari</p>
+        </div>
+      </div>
+      <p class="text-sm text-gray-400 leading-relaxed">
+        Jl. H. Miskan RT.05 RW.03 Dusun Tawangsari, Desa Ngampelsari, Kec. Candi, Kab. Sidoarjo
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-4 border-b border-gray-700 pb-2">Menu Utama</h4>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+        <li><a href="index.html#produk" class="hover:text-white transition">Marketplace</a></li>
+        <li><a href="index.html#tentang" class="hover:text-white transition">Tentang Kami</a></li>
+        <li><a href="index.html#kontak" class="hover:text-white transition">Kontak</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-4 border-b border-gray-700 pb-2">Informasi</h4>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+        <li><a href="#" class="hover:text-white transition">Kebijakan Privasi</a></li>
+        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+        <li><a href="#" class="hover:text-white transition">Hubungi Support</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-4 border-b border-gray-700 pb-2">Hubungi Kami</h4>
+      <div class="space-y-3 text-sm text-gray-400">
+        <p>📧 <a href="mailto:info@prmngampelsari.com" class="hover:text-white transition">info@prmngampelsari.com</a></p>
+        <p>📱 <a href="tel:+6281122334455" class="hover:text-white transition">0811-2233-4455</a></p>
+        <p>💬 <a href="https://wa.me/6281122334455" target="_blank" class="hover:text-white transition">WhatsApp Admin</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-700">
+    <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
+      <p class="mb-2">© 2025 Marketplace PRM Ngampelsari. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+    function changeMainImage(src, el) {
+      document.getElementById('mainImage').src = src;
+      document.querySelectorAll('.gallery-thumb').forEach(thumb => {
+        thumb.classList.remove('active', 'border-blue-600');
+        thumb.classList.add('border-gray-300');
+      });
+      el.classList.add('active', 'border-blue-600');
+    }
+    
+    function switchTab(tabName, el) {
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.add('hidden');
+      });
+    
+      document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.classList.remove('border-blue-600', 'text-slate-800', 'border-b-2');
+        btn.classList.add('text-slate-600');
+      });
+    
+      document.getElementById(tabName + '-tab').classList.remove('hidden');
+      el.classList.add('border-blue-600', 'text-slate-800', 'border-b-2');
+      el.classList.remove('text-slate-600');
+    }
+    
+    function toggleFaq(el) {
+      const answer = el.querySelector('.faq-answer');
+      const icon = el.querySelector('.faq-icon');
+      answer.classList.toggle('hidden');
+      icon.textContent = answer.classList.contains('hidden') ? '+' : '−';
+    }
+    </script>
+    
+    </body>
+    </html>
+    
